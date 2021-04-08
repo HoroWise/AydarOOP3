@@ -92,4 +92,16 @@ int main()
 	string text = " ";
 	int n = 100; // Кол-во операций
 	int count = 10; // Кол-во элементов
+
+again:
+	cout << "Напишите сколько случайных операций выполнить : ";
+	cin >> n;
+	unsigned int start_time = clock();
+	for (int i = 0; i < n; ++i) {
+		int act = rand() % count; // Выбираем с каким объектом взаимодействуем
+		int vibor = 1 + rand() % 3; // Выбираем какое действие произойдёт с выбранным объектом
+		int k = 1 + rand() % 2; // Выбираем подкласс
+		printf("%d)", i + 1);
+		//switch (vibor) {}
+	}
 }
