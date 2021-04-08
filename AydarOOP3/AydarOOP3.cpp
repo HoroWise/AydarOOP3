@@ -36,6 +36,54 @@ public:
 	~Human() { }
 };
 
+class Fishman :public Human {
+protected:
+	int fish_amount;
+
+public:
+	Fishman() {
+		fish_amount = 10;
+	}
+
+	Fishman(int fish_amount) {
+		this->fish_amount = fish_amount;
+	}
+
+	Fishman(const Fishman& f) {
+		fish_amount = f.fish_amount;
+	}
+
+	virtual void about_me() {
+		printf("Меня зовут %s, мой сегодняшний улов составил %d рыб\n", name.c_str(), fish_amount);
+	}
+
+	~Fishman() { }
+};
+
+class Farmer :public Human {
+protected:
+	int hens_amount;
+
+public:
+	Farmer() {
+		hens_amount = 20;
+	}
+
+	Farmer(int hens_amount) {
+		this->hens_amount = hens_amount;
+	}
+
+	Farmer(const Farmer& f) {
+		hens_amount = f.hens_amount;
+	}
+
+	virtual void about_me() {
+		printf("Меня зовут %s, в моем хозяйстве находится %d кур\n", name.c_str(), hens_amount);
+	}
+
+	~Farmer() { }
+};
+
 int main()
 {
     
