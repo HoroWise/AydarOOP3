@@ -86,5 +86,10 @@ public:
 
 int main()
 {
-    
+	setlocale(0, "");
+	//Storage storage;
+	srand(time(0));
+	string text = " ";
+	int n = 100; // Кол-во операций
+	int count = 10; // Кол-во элементов
 }
