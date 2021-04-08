@@ -177,7 +177,7 @@ int main()
 	int count = 10; // Кол-во элементов
 	storage.initialize(count);
 
-again:
+start:
 	cout << "Напишите сколько случайных операций выполнить : ";
 	cin >> n;
 	unsigned int start_time = clock();
@@ -188,7 +188,7 @@ again:
 		printf("%d)", i + 1);
 		switch (vibor) {
 		case 1:
-		again_add:
+		add:
 			if (storage.check_empty(act)) { // Если место свободно, то добавляем объект
 				if (k == 1) {
 					text = "Fishman";
@@ -207,7 +207,7 @@ again:
 				printf("  %i место хранилища занято, ищем свободное место в хранилище\n", act);
 				while (storage.get(act) != NULL)
 					act = (act + 1) % count;
-				goto again_add;
+				goto add;
 			}
 			break;
 		case 2:
@@ -240,6 +240,6 @@ again:
 	int b;
 	cin >> b;
 	if (b == 1) {
-		goto again;
+		goto start;
 	}
 }
